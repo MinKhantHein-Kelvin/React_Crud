@@ -8,6 +8,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PageNotFound from "./components/pages/PageNotFound";
 import AddUser from "./components/users/adduser";
+import EditUser from "./components/users/EditUser";
+import UserDetails from "./components/users/UserDetails";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/user/add" element={<AddUser/>}/>
+          <Route path="/user/edit/:id" element={<EditUser/>}/>
+          <Route path="/user/details/:id" element={<UserDetails/>}/>
           <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </div>
